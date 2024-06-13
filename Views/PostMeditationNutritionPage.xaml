@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMApp.Views.PostMeditationNutritionPage">
+
+    <StackLayout Padding="30">
+        <Label Text="Post-Meditation and Yoga Nutrition"
+               FontSize="24"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20" />
+
+        <Label Text="Replenishment: After your session, replenish your body with a balanced meal that includes proteins, healthy fats, and complex carbohydrates. This helps in muscle recovery and energy restoration. Hydration: Continue to hydrate after your practice. Herbal teas and coconut water are great options to restore electrolytes.Mindful Eating: Practice mindful eating by savoring each bite, eating slowly, and being aware of your hunger and fullness cues. This helps in better digestion and enhances the overall benefits of your meditation and yoga practice"
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="Gray"
+               Margin="0,0,0,20" />
+
+        <CarouselView x:Name="ExerciseCarousel"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      Margin="0,0,0,20">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type View}">
+                    <Image Source="fruit3.jpg"
+                           Aspect="AspectFill" />
+                    <Image Source="fruit4.jpg"
+                           Aspect="AspectFill" />
+                    <Image Source="heart.jpg"
+                           Aspect="AspectFill" />
+                </x:Array>
+            </CarouselView.ItemsSource>
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout VerticalOptions="FillAndExpand">
+                        <Image Source="{Binding Source}"
+                               Aspect="AspectFill"
+                               VerticalOptions="FillAndExpand" />
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+    </StackLayout>
+
+</ContentPage>

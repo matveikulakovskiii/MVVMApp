@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMApp.Views.ProfessionalExercisesPage">
+    
+    <StackLayout Padding="30">
+        <Label Text="Pro-Friendly Workouts"
+               FontSize="24"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20" />
+
+        <Label Text="Our training sessions are tailored for advanced practitioners. Each exercise should be performed for 5-6 minutes, with several repetitions. This approach allows you to deepen your practice and enhance your overall well-being with more intensive and sustained efforts."
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="Gray"
+               Margin="0,0,0,20" />
+
+        <CarouselView x:Name="ExerciseCarousel"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      Margin="0,0,0,20">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type View}">
+                    <Image Source="first_hard.jpg"
+                           Aspect="AspectFill" />
+                    <Image Source="second_hard.jpg"
+                           Aspect="AspectFill" />
+                    <Image Source="third_hard.jpg"
+                           Aspect="AspectFill" />
+                    <Image Source="fourth_hard.jpg"
+                           Aspect="AspectFill" />
+                </x:Array>
+            </CarouselView.ItemsSource>
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout VerticalOptions="FillAndExpand">
+                        <Image Source="{Binding Source}"
+                               Aspect="AspectFill"
+                               VerticalOptions="FillAndExpand" />
+                        <Label Text="Lift your upper body and legs upward. Keep your arms extended behind your back. Try not to lower your head."
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               Margin="0,20,0,0" />
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+    </StackLayout>
+
+
+</ContentPage>

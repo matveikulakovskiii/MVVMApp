@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMApp.Views.WelcomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Menu"
+                     Priority="0"
+                     Order="Primary"
+                     Clicked="OnMenuClicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="30">
+        <Label Text="MeditEat" FontSize="36" HorizontalOptions="Center" />
+        <Label Text="Welcome to MeditEat — your personal guide to a healthy lifestyle!"
+               FontSize="18" HorizontalOptions="Center" TextColor="White" />
+        <Label Text="MeditEat is a unique application that combines meditation practices and healthy eating to help you achieve harmony in both physical and mental health. With a wide range of guided meditations and curated nutrition plans, MeditEat offers personalized tools and resources to support your wellness journey."
+               FontSize="18" HorizontalOptions="Center" TextColor="White" />
+        <Image Source="welcome_image.jpg" HorizontalOptions="Center" />
+        <Label Text="Start your journey to health with MeditEat today!"
+               FontSize="16" HorizontalOptions="Center" TextColor="White" />
+    </StackLayout>
+</ContentPage>

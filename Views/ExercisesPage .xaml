@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMApp.Views.ExercisesPage">
+
+    <StackLayout Padding="30" VerticalOptions="CenterAndExpand">
+        <Button Text="Beginner Exercises"
+                Clicked="OnBeginnerClicked"
+                Margin="0,0,0,20" />
+        <!-- Отступ снизу для разделения кнопок -->
+        <Button Text="Professional Exercises"
+                Clicked="OnProfessionalClicked"
+                Margin="0,0,0,20" />
+        <!-- Отступ снизу для разделения кнопок -->
+    </StackLayout>
+
+</ContentPage>
